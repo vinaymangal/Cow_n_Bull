@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const digitBoxes = currentInputDisplay.querySelectorAll('.digit-box');
     const gameBoard = document.getElementById('game-board');
     const keys = document.querySelectorAll('.key');
+    const resetBtn = document.getElementById('reset-btn');
     const rulesBtn = document.getElementById('rules-btn');
     const rulesModal = document.getElementById('rules-modal');
     const closeRulesBtn = rulesModal.querySelector('.close-btn');
@@ -187,6 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Modals
+    resetBtn.addEventListener('click', initGame);
     rulesBtn.addEventListener('click', () => rulesModal.classList.remove('hidden'));
     closeRulesBtn.addEventListener('click', () => rulesModal.classList.add('hidden'));
     restartBtn.addEventListener('click', initGame);
